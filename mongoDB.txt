@@ -1,0 +1,9 @@
+mongoDB url = mongodb+srv://dilshanindunilrajapaksha1:Jf1lhroIj2rfdkST@cluster0.nc2iv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+password = Jf1lhroIj2rfdkST
+
+username = dilshanindunilrajapaksha1
+
+
+dilshanindunilrajapaksha04@gmail.com
+fjqy fxwm jrrp ufrq

@@ -1,0 +1,83 @@
+project-name/
+│
+├── backend/                        # Backend code (Node.js/Express.js)
+│   ├── config/                     # Configuration files (e.g., database, environment)
+│   │   ├── db.js                   # Database connection (MongoDB)
+│   │   ├── env.js                  # Environment configuration setup
+│   │
+│   ├── controllers/                # Logic for handling requests (one file per feature)
+│   │   ├── adminController.js      # Handles admin actions (admin panel)
+│   │   ├── sltAdminController.js   # Handles SLT admin actions
+│   │   ├── assetController.js      # Asset management actions
+│   │   ├── userController.js       # User management actions
+│   │
+│   ├── middleware/                 # Middleware functions
+│   │   ├── authMiddleware.js       # Role-based authorization
+│   │   ├── errorMiddleware.js      # Error handling middleware
+│   │
+│   ├── models/                     # MongoDB schemas and models
+│   │   ├── User.js                 # User model
+│   │   ├── Asset.js                # Asset model
+│   │   ├── Company.js              # Company model
+│   │
+│   ├── routes/                     # API routes
+│   │   ├── adminRoutes.js          # Admin routes (for admin actions)
+│   │   ├── sltAdminRoutes.js       # SLT Admin routes
+│   │   ├── userRoutes.js           # User-related routes (authentication, user info)
+│   │   ├── assetRoutes.js          # Asset management routes
+│   │
+│   ├── utils/                      # Utility functions
+│   │   ├── generateToken.js        # Generate JWT tokens
+│   │   ├── logger.js               # Centralized logging utility
+│   │
+│   ├── .env                        # Environment variables
+│   ├── server.js                   # Entry point for backend (Express.js app)
+│   └── package.json                # Backend dependencies
+│
+├── frontend/                       # Frontend code (React using Vite)
+│   ├── public/                     # Static files
+│   │   ├── index.html              # Entry HTML file (Vite's template)
+│   │
+│   ├── src/                        # React source code
+│   │   ├── assets/                 # Images, fonts, and other assets
+│   │   │   ├── logo.png
+│   │   │   ├── styles.css
+│   │   │
+│   │   ├── components/             # Reusable components
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Sidebar.jsx
+│   │   │   ├── Table.jsx
+│   │   │
+│   │   ├── pages/                  # Main page components (one per route)
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── UserManagement.jsx
+│   │   │   ├── AssetsManagement.jsx
+│   │   │   ├── Reports.jsx
+│   │   │   ├── Settings.jsx
+│   │   │   ├── SLTDashboard.jsx
+│   │   │   ├── AddCompany.jsx
+│   │   │   ├── SystemAdmin.jsx
+│   │   │   ├── DeactivateCompany.jsx
+│   │   │   ├── UsageDetails.jsx
+│   │   │
+│   │   ├── context/                # Context API for state management (optional)
+│   │   │   ├── AuthContext.js
+│   │   │   ├── AppContext.js
+│   │   │
+│   │   ├── hooks/                  # Custom React hooks
+│   │   │   ├── useAuth.js
+│   │   │   ├── useFetch.js
+│   │   │
+│   │   ├── utils/                  # Frontend utility functions
+│   │   │   ├── formatDate.js
+│   │   │   ├── api.js              # Axios or fetch wrapper for API calls
+│   │   │
+│   │   ├── App.jsx                  # Main React component
+│   │   ├── index.jsx                # Entry point for React
+│   │   ├── routes.jsx               # Application routing
+│   │
+│   ├── package.json                # Frontend dependencies (using Vite)
+│   ├── vite.config.js              # Vite configuration
+│   └── tsconfig.json               # TypeScript config (if using TypeScript)
+│
+└── .gitignore                      # Files and folders to ignore in Git

@@ -1,0 +1,166 @@
+//  SLT ADMIN LOGIN
+POST http://localhost:5000/api/slt-admin/login  
+	{
+	"username":"sltadmin",
+	"password":"sltadminpassword"
+	}
+
+//  ADD COMPANY
+POST http://localhost:5000/api/slt-admin/add-company
+	{
+	"name":"",
+	"industry":"",
+	"email":"",
+	"hotline":"", 
+	"address":"",
+	"description":""
+	}
+
+//  FETCH COMPANIES
+GET http://localhost:5000/api/slt-admin/companies
+
+//  UPDATE COMPANY
+PUT http://localhost:5000/api/company/:companyId
+	{
+	"name":"",
+	"industry":"",
+	"email":"",
+	"hotline":"",
+	"address":"",
+	"description":""
+	}
+
+//  DELETE COMPANY(later implement delete administrators and assets form data base)
+DELTE http://localhost:5000/api/company/:companyId
+
+//  ADD ADMINISTRATOR TO COMPANY
+POST http://localhost:5000/api/slt-admin/add-administrator
+	{
+	"companyId":"",
+	"email":""
+	}
+
+//  FETCH ALL ADMINISTRATORS (later implement - use company id ad fetch all adminisstrators)
+GET http://localhost:5000/api/slt-admin/administrator/:companyID
+
+//  REMOVE ADMINISTRATORS 
+DELETE http://localhost:5000/api/slt-admin/remove-administrator
+	{
+	"companyId":"",
+	"email":""
+	}
+
+//  ADMINISTRATOR LOGIN SEND CODE
+POST 	
+	{
+	"email":""
+	}
+
+// ADMINISTRATOR LOGIN VERIFY CODE
+POST http://localhost:5000/api/administrator/verify-code
+	{
+	"emai":"",
+	"code":""
+	}
+
+//  ADD FACTORY WOKERS
+POST http://localhost:5000/api/factory-worker/add/:companyId
+	{
+	"name":"",
+	"email":"",
+	"phone":"",
+	"department":"",
+	"position":"",
+	}
+
+//  UPDATE FACTORY WOKERS
+PUT http://localhost:5000/api/factory-worker/:workerId
+	{
+	"name":"",
+	"email":"",
+	"phone":"",
+	"department":"",
+	"position":""
+	}
+
+//  FETCH ALL FACTORY WOKERS FOR SPECIFIC COMPANY
+GET http://localhost:5000/api/factory-worker/company/:comapanyId
+
+//  REMOVE FACTORY WOKER
+DELETE http://localhost:5000//api/factory-worker/:workerId
+
+
+//  ADD NEW ASSETS
+ADD http://localhost:5000/api/assets/add/:companyId
+	{
+    	"name": "Asset Name",
+    	"brand": "Brand Name",
+    	"purchaseDate": "2024-12-16T10:00:00Z",
+   	 "status": "Available",
+	}
+
+
+//  UPDATE ASSETS OTHER DETAILS
+PATCH http://localhost:5000/api/update/:assetsID
+	{
+ 	 "type": "Electronics",
+  	 "condition": "Good",
+	 "location": "Office 3",
+ 	 "maintenanceDue": "2024-12-01T00:00:00.000Z",
+ 	 "assetTag": "A123",
+  	 "qrCode": "https://example.com/qrcode"
+	}
+
+
+// UPDATE ASSETS USER 
+PATCH http://localhost:5000/api/assets/user/005
+	{
+	"user":"dilshna"
+	}
+
+//  EDIT ASSET DETAILS
+PUT http://localhost:5000/api/edit-asset/001
+	{
+  	"name":"updated name"
+	}
+
+//  GET ASSETS EACH ASSETS
+GET http://localhost:5000/api/assets/:companyID
+
+
+//  DELETE ASSETS 
+DELETE http://localhost:5000/api/assets/:assetsID
+
+
+// ADD MAINTENANCE
+POST  http://localhost:5000/api/maintenance/add
+	{
+	"assetID": "123",
+	"companyID": "64b8f7a94f27a8c94a1d1234",
+	"startDate": "2025-01-06",
+	"startTime": "14:30",
+	"description": "Regular maintenance check"
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
